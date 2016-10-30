@@ -1,7 +1,7 @@
 /*
 C program for Huffman Coding
 
-Melihþah AKIN - Çankaya UNIVERSITY CENG DEPARTMENT
+Melihsah AKIN - Ã‡ankaya UNIVERSITY CENG DEPARTMENT
 
 */
 #include <stdio.h>
