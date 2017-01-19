@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 void quickSort(int arr[], int left, int right)
@@ -26,21 +26,20 @@ void quickSort(int arr[], int left, int right)
 
 void display(int arr[], int size)
 {
-	for (int i = 0; i < size; i++)
-	{
-		cout << arr[i] << "  ";
-	}
+	for (int i = 0; i < size; i++) cout << arr[i] << " ";
 }
+
 int main()
 {
 	int arr[] = { 0,90,32,66,22,11,754,12,23,5 };
 	int size = sizeof(arr) / sizeof(int);
-	
 
-	quickSort(arr, 0,size-1);
+
+	quickSort(arr, 0, size - 1);
 
 
 	display(arr, size);
+	cout << endl;
 
-	system("pause");
+	return 0;
 }

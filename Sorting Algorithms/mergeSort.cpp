@@ -1,21 +1,20 @@
 #include <iostream>
-#include <string>
 
 
 using namespace std;
-void merge(int arr[], int size, int left,  int right)
+void merge(int arr[], int size, int left, int right)
 {
 	int * temp = new int[size];
-	for (int i = left; i <= right; i++) 
+	for (int i = left; i <= right; i++)
 	{
 		temp[i] = arr[i];
 	}
 	int i = left;
 	int mid = (left + right) / 2;
-	int j =mid + 1;
+	int j = mid + 1;
 	int k = left;
 
-	while (i <= mid && j <= right) 
+	while (i <= mid && j <= right)
 	{
 		if (temp[i] <= temp[j])
 		{
@@ -48,6 +47,10 @@ void mergeSort(int arr[], int size, int left, int right)
 		merge(arr, size, left, right);
 	}
 }
+void display(int arr[], int size)
+{
+	for (int i = 0; i < size; i++) cout << arr[i] << " ";
+}
 
 int main()
 {
@@ -55,10 +58,8 @@ int main()
 	int size = sizeof(arr) / sizeof(int);
 	mergeSort(arr, size, 0, size - 1);
 
-	for (int i = 0; i < size; i++) 
-	{
-		cout << arr[i] << "  ";
-	}
-
-	system("pause");
+	display(arr, size);
+	cout << endl;
+	
+	return 0;
 }

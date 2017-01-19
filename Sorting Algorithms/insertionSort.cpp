@@ -15,15 +15,21 @@ void insertionSort(int arr[], int size)
 		}
 	}
 }
+
+void display(int arr[], int size)
+{
+	for (int i = 0; i < size; i++) cout << arr[i] << " ";
+}
 int main()
 {
 	int arr[] = { 0,90,32,66,22,11,754,12,23,5 };
 	int size = sizeof(arr) / sizeof(int);
-	
+
 
 
 	insertionSort(arr, size);
 	display(arr, size);
-
-	system("pause");
+	cout << endl;
+	
+	return 0;
 }
